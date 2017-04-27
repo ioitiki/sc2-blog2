@@ -1,4 +1,4 @@
-/* eslint-env node */
+var apiKey = require('./../.env').apiKey;
 
 module.exports = function(environment) {
   var ENV = {
@@ -6,6 +6,12 @@ module.exports = function(environment) {
     environment: environment,
     rootURL: '/',
     locationType: 'auto',
+    firebase: {
+      apiKey: 'apiKey',
+      authDomain: 'sc2-blog.firebaseapp.com',
+      databaseURL: 'https://sc2-blog.firebaseio.com/',
+      storageBucket: 'gs://sc2-blog.appspot.com/',
+    },
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
